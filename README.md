@@ -1,2 +1,2 @@
 # Payment
-<h1>This project Create in Tailwind Css for example</h1>
+<h1>This project was created in tailwind css</h1>
