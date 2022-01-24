@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  transition: all 0.3s ease;
+}
+
+.payment-card-dark {
+  width: 428px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(180deg, #291c1c 22.07%, rgba(41, 28, 28, 0) 104.1%);
+}
+
+.payment-option {
+  margin-top: 15px;
+}
+
+.payment-option_list {
+  display: flex;
+  margin-top: 5px;
+}
+
+.payment-option-item ~ .payment-option-item {
+  margin-left: 50px;
+}
+
+.payment-option-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75px;
+  border: 1px solid white;
+  padding: 0 1px;
+  border-radius: 5px;
+}

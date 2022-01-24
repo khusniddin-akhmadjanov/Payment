@@ -6,10 +6,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style-ex.css" />
   </head>
   <body class="bg-gray-500">
-    <h1 class="text-6xl text-center mt-20 text-gray-100">
-      Welcome to Tailwind CSS!
-    </h1>
+    <div class="payment-card-dark mt-10 px-5 py-10 rounded-3xl">
+      <button>
+        <img
+          class="hover:scale-105 transition-all"
+          src="./images/BackArrow.svg"
+          alt="back arrow"
+        />
+      </button>
+      <h1 class="capitalize text-white text-2xl font-normal">payment</h1>
+      <p class="text-xs text-white">Add your card details below</p>
+      <div class="payment-option">
+        <h4 class="text-xs text-white">Payment Option</h4>
+        <ul class="payment-option_list">
+          <li class="payment-option-item">
+            <input
+              type="radio"
+              id="paypal-id"
+              name="pay"
+              value="paypal"
+              class="payment-visa"
+            />
+            <label for="paypal-id">
+              <img src="./images/fa_cc-paypal.svg" alt="" />
+            </label>
+          </li>
+          <li class="payment-option-item">
+            <input
+              type="radio"
+              id="visa-id"
+              name="pay"
+              value="visa"
+              class="payment-visa"
+            />
+            <label for="visa-id">
+              <img src="./images/logos_visaelectron.svg" alt="" />
+            </label>
+          </li>
+          <li class="payment-option-item">
+            <input
+              type="radio"
+              id="mastercard-id"
+              name="pay"
+              value="mastercard"
+              class="payment-mastercard"
+            />
+            <label for="mastercard-id">
+              <img src="./images/grommet-icons_mastercard.svg" alt="" />
+            </label>
+          </li>
+        </ul>
+      </div>
+      <div class="pay-card">
+        <h1 class="" id="pay-card-title">Card type</h1>
+        <img src="./images/nfc.png" alt="" />
+        <img src="./images/chip.png" alt="" />
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
