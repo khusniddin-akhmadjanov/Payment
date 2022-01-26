@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/style-ex.css" />
   </head>
-  <body class="bg-gray-500">
-    <div class="payment-card-dark mt-10 px-5 py-10 rounded-3xl">
+  <body>
+    <h1 class="payment-card-text text-center" id="back-text-id">PayPal</h1>
+    <div
+      class="payment-card payment-card-dark mt-10 px-5 py-10 rounded-3xl"
+      id="payment-card-id"
+    >
       <button>
         <img
           class="hover:scale-105 transition-all"
@@ -19,6 +23,7 @@
       </button>
       <h1 class="capitalize text-white text-2xl font-normal">payment</h1>
       <p class="text-xs text-white">Add your card details below</p>
+      <!-- Card option start -->
       <div class="payment-option">
         <h4 class="text-xs text-white">Payment Option</h4>
         <ul class="payment-option_list">
@@ -29,6 +34,7 @@
               name="pay"
               value="paypal"
               class="payment-visa"
+              checked
             />
             <label for="paypal-id">
               <img src="./images/fa_cc-paypal.svg" alt="" />
@@ -60,11 +66,79 @@
           </li>
         </ul>
       </div>
+      <!-- Card option finish -->
+      <!-- Pay Card start -->
       <div class="pay-card">
-        <h1 class="" id="pay-card-title">Card type</h1>
-        <img src="./images/nfc.png" alt="" />
-        <img src="./images/chip.png" alt="" />
+        <div class="pay-card_top">
+          <h2>World</h2>
+          <img src="./images/nfc.png" alt="" />
+        </div>
+        <div class="pay-card_middle">
+          <img src="./images/chip.png" alt="" />
+        </div>
+        <div class="pay-card_footer">
+          <div>
+            <h3 class="card-number">1234 5678 9012 3456</h3>
+            <h4 class="card-date">
+              <span class="card-month">12</span>
+              <span>/</span>
+              <span class="card-year">23</span>
+            </h4>
+            <h4 class="card-user-name">Lee M.Cardholder</h4>
+          </div>
+          <div>
+            <img src="./images/PayPal2007.svg.png" width="80" alt="" />
+          </div>
+        </div>
       </div>
+      <!-- Pay card finishe -->
+      <!-- Form start  -->
+      <form action="" method="post">
+        <div class="input-item">
+          <label class="form-label" for="name-id">Cardholder's name</label
+          ><br />
+          <input
+            class="form-input"
+            type="text"
+            id="name-id"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="input-item">
+          <label class="form-label" for="card-umber-id">Card number</label
+          ><br />
+          <input
+            class="form-input"
+            type="text"
+            id="card-number-id"
+            autocomplete="off"
+            required
+          />
+        </div>
+        <div class="input-item input-last-item">
+          <div class="input-last-div">
+            <label for="expiry-id">Expiry</label>
+            <input type="text" autocomplete="off" required />
+          </div>
+          <div class="input-last-div">
+            <label for="cvv-id"> CVV </label>
+            <input type="text" id="cvv-id" autocomplete="off" required />
+          </div>
+          <div class="input-last-div">
+            <label for="country-id">Country</label>
+            <select class="input-select" name="" id="country-id">
+              <option value="" selected></option>
+              <option value="">Uz</option>
+              <option value="">Uz</option>
+              <option value="">Uz</option>
+              <option value="">Uz</option>
+            </select>
+          </div>
+        </div>
+      </form>
+      <!-- Form finish -->
+      <input class="checkbox" type="checkbox" />
     </div>
     <script src="./js/main.js"></script>
   </body>

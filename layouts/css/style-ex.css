@@ -5,14 +5,28 @@
 
 body {
   transition: all 0.3s ease;
+  background-color: lightblue;
 }
 
 .payment-card-dark {
+  position: relative;
+  top: -330px;
   width: 428px;
+  padding: 60px 37px;
   margin-left: auto;
   margin-right: auto;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     linear-gradient(180deg, #291c1c 22.07%, rgba(41, 28, 28, 0) 104.1%);
+  z-index: 999;
+}
+
+.payment-card-text {
+  font-size: 200px;
+  position: relative;
+  top: 200px;
+  z-index: 1;
+  color: rgba(184, 18, 206, 0.2);
+  transition: all 0.3s ease-in-out;
 }
 
 .payment-option {
@@ -36,4 +50,156 @@ body {
   border: 1px solid white;
   padding: 0 1px;
   border-radius: 5px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(180deg, #291c1c 22.07%, rgba(41, 28, 28, 0) 104.1%);
+}
+
+.pay-card {
+  margin-top: 25px;
+  position: relative;
+  padding: 15px 10px;
+  border: 4px solid #c4c4c452;
+  border-radius: 15px;
+}
+
+.pay-card_top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pay-card_top > h2 {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(57, 214, 214);
+}
+
+.pay-card_middle {
+  margin-top: 20px;
+  margin-left: 15px;
+}
+
+.pay-card_footer {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card-number {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(57, 214, 214);
+  letter-spacing: 1px;
+  word-spacing: 5px;
+}
+
+.card-date {
+  padding: 0;
+  margin: 0;
+}
+
+.card-date > span {
+  color: rgb(57, 214, 214);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.card-user-name {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(57, 214, 214);
+}
+
+.form-label {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #bfbaba;
+}
+
+.form-input {
+  width: 355px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 8px 0 8px 8px;
+
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+
+.input-item {
+  margin-top: 30px;
+}
+
+.input-last-item {
+  display: flex;
+}
+
+.input-last-item input {
+  width: 109px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 8px 0 8px 8px;
+
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+.input-last-item label {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+.input-select {
+  width: 109px;
+  background-color: transparent;
+  outline: none;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 14px 0 14px 8px;
+
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 15px;
+  letter-spacing: 0em;
+  color: #ffffff;
+}
+
+.input-last-div ~ .input-last-div {
+  margin-left: 13px;
+}
+
+.checkbox {
+  position: relative;
+  -webkit-appearance: initial;
+  width: 15px;
+  height: 10px;
+  border-radius: 3px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  border: 1px solid #ddd;
 }
