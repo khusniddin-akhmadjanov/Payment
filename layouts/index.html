@@ -78,16 +78,21 @@
         </div>
         <div class="pay-card_footer">
           <div>
-            <h3 class="card-number">1234 5678 9012 3456</h3>
+            <h3 class="card-number" id="card-number-id">1234 5678 9012 3456</h3>
             <h4 class="card-date">
-              <span class="card-month">12</span>
-              <span>/</span>
-              <span class="card-year">23</span>
+              <span class="card-month" id="card-date-id">12 / 23</span>
             </h4>
-            <h4 class="card-user-name">Lee M.Cardholder</h4>
+            <h4 class="card-user-name" id="card-user-name-id">
+              Lee M.Cardholder
+            </h4>
           </div>
           <div>
-            <img src="./images/PayPal2007.svg.png" width="80" alt="" />
+            <img
+              id="card-type-id"
+              src="./images/PayPal2007.svg.png"
+              width="80"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -103,6 +108,7 @@
             id="name-id"
             autocomplete="off"
             required
+            maxlength="25"
           />
         </div>
         <div class="input-item">
@@ -111,19 +117,32 @@
           <input
             class="form-input"
             type="text"
-            id="card-number-id"
+            id="card-input-number-id"
             autocomplete="off"
+            maxlength="19"
             required
           />
         </div>
         <div class="input-item input-last-item">
           <div class="input-last-div">
             <label for="expiry-id">Expiry</label>
-            <input type="text" autocomplete="off" required />
+            <input
+              type="text"
+              autocomplete="off"
+              id="expiry-id"
+              required
+              maxlength="5"
+            />
           </div>
           <div class="input-last-div">
             <label for="cvv-id"> CVV </label>
-            <input type="text" id="cvv-id" autocomplete="off" required />
+            <input
+              type="text"
+              id="cvv-id"
+              autocomplete="off"
+              maxlength="3"
+              required
+            />
           </div>
           <div class="input-last-div">
             <label for="country-id">Country</label>
@@ -136,10 +155,25 @@
             </select>
           </div>
         </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="card-future-id" />
+          <label for="card-future-id">Use card for future purpose</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="accept-term-id" />
+          <label for="accept-term-id"
+            >Accept the <a href="#">Terms and conditions</a></label
+          >
+        </div>
+        <div>
+          <button type="submit" class="pay-now">Pay now</button>
+        </div>
       </form>
       <!-- Form finish -->
-      <input class="checkbox" type="checkbox" />
+
+      <div class="line"></div>
     </div>
     <script src="./js/main.js"></script>
+    <script src="./js/form.js"></script>
   </body>
 </html>
