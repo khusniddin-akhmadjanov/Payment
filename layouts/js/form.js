@@ -14,6 +14,12 @@ let cardNumberCVV = document.getElementById("cvv-id");
 
 let countrySelect = document.getElementById("country-id");
 
+let payCard = document.getElementById("pay-card-id");
+
+let paycardFront = document.getElementById("pay-card-front");
+
+let paycardBack = document.getElementById("pay-card-back");
+
 cardNameInput.addEventListener("keyup", function (e) {
   cardUserName.innerHTML = cardNameInput.value;
 });
@@ -24,4 +30,12 @@ cardNumberInput.addEventListener("keyup", function (e) {
 
 cardExpiryInput.addEventListener("keyup", function (e) {
   cardDate.innerHTML = cardExpiryInput.value;
+});
+
+cardNumberCVV.addEventListener("focusin", () => {
+  paycardFront.classList.add("cardHover");
+});
+
+cardNumberCVV.addEventListener("focusout", () => {
+  paycardFront.classList.remove("cardHover");
 });
