@@ -66,16 +66,49 @@ body {
   height: 220px;
   margin-top: 25px;
   position: relative;
-  border: 4px solid #c4c4c452;
   border-radius: 15px;
 }
 
 #pay-card-front {
-  transition: all 0.6s ease-in-out;
-  padding: 15px 10px;
-  background-color: #291c1c;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  position: absolute;
   border-radius: 15px;
+  background-image: url(../images/bg-2.jpg);
+  backdrop-filter: cover;
+  padding: 15px 10px;
   backface-visibility: hidden;
+  transition: all 0.7s ease-in-out;
+  border: 4px solid #c4c4c452;
+}
+
+.pay-card-back {
+  background-color: rgba(71, 69, 69, 0.5);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  transform: rotateY(180deg);
+  font-size: 50px;
+  transition: all 0.7s ease-in-out;
+  border: 4px solid #c4c4c452;
+}
+
+.black-line {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+}
+
+.pay-card-hover-front {
+  transform: rotateY(-180deg);
+}
+
+.pay-card-hover-back {
+  transform: rotateY(0deg);
 }
 
 .pay-card_top {
@@ -87,7 +120,7 @@ body {
 .pay-card_top > h2 {
   font-size: 20px;
   font-weight: 500;
-  color: rgb(57, 214, 214);
+  color: #222;
 }
 
 .pay-card_middle {
@@ -102,12 +135,34 @@ body {
   align-items: flex-end;
 }
 
+.cvv-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 5%;
+  margin-top: 15px;
+}
+
+.cvv-left-box {
+  background-color: aliceblue;
+  width: 60%;
+  height: 30px;
+  text-align: right;
+  font-size: 20px;
+}
+
+.cvv-right-box {
+  background-color: aliceblue;
+  width: 20%;
+  height: 30px;
+}
+
 .card-number {
   padding: 0;
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  color: rgb(57, 214, 214);
+  color: #222;
   letter-spacing: 1px;
   word-spacing: 5px;
 }
@@ -118,7 +173,7 @@ body {
 }
 
 .card-date > span {
-  color: rgb(57, 214, 214);
+  color: #222;
   font-size: 12px;
   font-weight: 400;
 }
@@ -126,7 +181,7 @@ body {
 .card-user-name {
   font-size: 18px;
   font-weight: 500;
-  color: rgb(57, 214, 214);
+  color: #222;
   padding: 0;
   margin: 0;
 }
@@ -287,8 +342,4 @@ body {
 
 .checkbox-item a {
   color: #f4bd30;
-}
-
-.cardHover {
-  transform: rotateY(180deg);
 }

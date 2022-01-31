@@ -20,6 +20,8 @@ let paycardFront = document.getElementById("pay-card-front");
 
 let paycardBack = document.getElementById("pay-card-back");
 
+let backCardCvv = document.getElementById("back-cvv-id");
+
 cardNameInput.addEventListener("keyup", function (e) {
   cardUserName.innerHTML = cardNameInput.value;
 });
@@ -32,10 +34,18 @@ cardExpiryInput.addEventListener("keyup", function (e) {
   cardDate.innerHTML = cardExpiryInput.value;
 });
 
-cardNumberCVV.addEventListener("focusin", () => {
-  paycardFront.classList.add("cardHover");
+cardNumberCVV.addEventListener("focusin", function (fr) {
+  paycardFront.classList.add("pay-card-hover-front");
+
+  paycardBack.classList.add("pay-card-hover-back");
 });
 
-cardNumberCVV.addEventListener("focusout", () => {
-  paycardFront.classList.remove("cardHover");
+cardNumberCVV.addEventListener("focusout", function (fe) {
+  paycardFront.classList.remove("pay-card-hover-front");
+
+  paycardBack.classList.remove("pay-card-hover-back");
+});
+
+cardNumberCVV.addEventListener("keyup", function (sc) {
+  backCardCvv.innerHTML = cardNumberCVV.value;
 });
