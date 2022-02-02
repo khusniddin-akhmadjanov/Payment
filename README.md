@@ -8,4 +8,6 @@ Here you can select the type of cards, enter your name and card number, and so o
   <h2>The main focus of this project is on the JavaScript section.</h2>
   
   <hr>
+  
+  <a href="https://khusniddin-akhmadjanov.github.io/Payment/">See now</a>
 </div>
