@@ -9,5 +9,6 @@ Here you can select the type of cards, enter your name and card number, and so o
   
   <hr>
   
-  <a href="https://khusniddin-akhmadjanov.github.io/Payment/">See now</a>
+  <a href="https://khusniddin-akhmadjanov.github.io/Payment/">see this site now
+</a>
 </div>
